@@ -32,6 +32,6 @@ public class blocManager : MonoBehaviour {
     }
 
     void Spawn() {
-        Transform newGameObject = Instantiate(bloc);
+        Instantiate(bloc);
     }
 }

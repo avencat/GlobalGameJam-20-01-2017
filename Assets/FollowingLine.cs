@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowingLine : MonoBehaviour {
 
 	List<Vector3> positions = new List<Vector3>();
-	public Vector3 offset = new Vector3(-0.4f, 0, 0f);
+	public Vector3 offset = new Vector3(0f, 0, 0f);
 	Vector3[] tab;
 
 	// Use this for initialization

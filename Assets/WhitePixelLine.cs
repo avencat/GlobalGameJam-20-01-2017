@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WhitePixelLine : MonoBehaviour {
 
-	public Vector3 offset = new Vector3(0f, -1f, 0f);
+	Vector3 offset = new Vector3(-0.4f, 0f, 0f);
 	Transform mainPlayer;
 
 	// Start is called to initialize the object
