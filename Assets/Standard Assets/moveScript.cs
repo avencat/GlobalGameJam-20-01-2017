@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class moveScript : MonoBehaviour {
     
-    public Vector2 speed = new Vector2(10, 10);
-    private Vector2 direction = new Vector2(-1f, 0);
-    private Vector2 movement;
+    Vector3 direction = new Vector3(-0.4f, 0, 0);
 
     void Start()
     {
@@ -15,16 +13,8 @@ public class moveScript : MonoBehaviour {
 
     void Update()
     {
-        movement = new Vector2(
-          speed.x * direction.x,
-          0);
-
-    }
-
-    void FixedUpdate()
-    {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        GetComponent<Rigidbody>().velocity = movement;
+		transform.position = gameObject.transform.position + direction;
         if (screenPos.x <= 0)
         {
             Destroy(gameObject);

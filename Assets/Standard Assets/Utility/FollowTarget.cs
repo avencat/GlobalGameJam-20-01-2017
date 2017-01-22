@@ -14,11 +14,10 @@ namespace UnityStandardAssets.Utility
 
         private void LateUpdate()
         {
-			if (Input.GetKey ("space") && target.position.y < 19f) {
+			if ((Input.GetKey ("space") || Input.touchCount > 0) && target.position.y < 19f) {
 				offset.y = speed;
 				max = 0f;
-			} else if (target.position.y > -(max) && max != 0f) {
-				print ("max" +  max);
+			} else if (target.position.y > -(max) && max != 0f && !Input.GetKey ("space") && Input.touchCount == 0) {
 				offset.y = -speed;
 			} else if (target.position.y < 0f) {
 				if (target.position.y + speed > 0f) {
